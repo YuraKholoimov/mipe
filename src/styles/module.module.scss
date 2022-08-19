@@ -1,0 +1,128 @@
+@import "index";
+
+.moduleContainer {
+  @include flexCenter(row);
+  position: relative;
+  justify-content: end;
+  width: 615px;
+  margin: 0 10px 10px 0;
+  //border: 1px solid;
+
+  .moduleTitle {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    align-self: start;
+
+    h4 {
+      line-height: 40%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 140px;
+      border-top: 2px solid var(--main-color--red);
+    }
+  }
+
+  .moduleLists {
+    height: 100%;
+    width: 410px;
+    padding: 8px;
+
+    //ul li {
+    //  position: relative;
+    //  text-align: start;
+    //
+    //  &::before {
+    //    content: "";
+    //    position: absolute;
+    //    left: -20px;
+    //    top: 7px;
+    //    height: 5px;
+    //    width: 5px;
+    //    border-radius: 60px;
+    //    background-color: orangered;
+    //  }
+    //}
+  }
+
+  // Screen for 375px
+  @media (max-width: 1286px) {
+    flex-flow: column;
+
+
+    .moduleTitle {
+      //border: 1px solid slateblue;
+      position: relative;
+      padding-left: 69px;
+      width: 345px;
+      height: 51px;
+      background-color: var(--modalNoActive-bgColor--grey);
+
+
+      h4 {
+        line-height: 0;
+        font-size: 18px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc(50% - 10px);
+        left: 24px;
+        height: 18px;
+        width: 18px;
+        border: none;
+        background-image: url("../assetcc/icons/crose.svg");
+
+      }
+    }
+
+    .modalNoActive {
+      background-color: var(--modalActive-bgColor--red);
+      color: white;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc(50% - 0px);
+        left: 24px;
+        height: 2px;
+        width: 18px;
+        border: none;
+        background-image: url('../assetcc/icons/minus.svg');
+        //background-size: 12px;
+      }
+    }
+
+    .moduleLists {
+      display: flex;
+      //flex-basis: 10%;
+      width: 100%;
+      border: 3px solid #00ffee;
+      //transform: scaleY(1);
+      //animation: openHide 300ms ease-in-out;
+      transition: flex-grow .3s linear,
+      background-color 0.2s ease-in;
+
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 15px;
+    }
+    //
+    //@keyframes openHide {
+    //  from {
+    //    transform: scaleY(0) ;
+    //  }
+    //  to {
+    //    transform: scaleY(1);
+    //  }
+    //}
+  }
+
+}
+

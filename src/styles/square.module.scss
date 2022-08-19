@@ -1,0 +1,20 @@
+.square {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 264px;
+    top: -218px;
+    border-bottom: 50px solid #a60a0a;
+    border-right: 50px solid transparent;
+    background-color: #fff;
+
+    @media (max-width: 1286px) {
+      border-bottom: 30px solid #a60a0a;
+      border-right: 30px solid transparent;
+      left: 143px;
+      top: -210px;
+    }
+  }
+}

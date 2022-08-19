@@ -1,3 +1,3 @@
-export enum Env {
-
+export enum Url {
+    PRODUCTS = '/products'
 }

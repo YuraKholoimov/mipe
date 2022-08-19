@@ -1,7 +1,57 @@
-.App {
-  text-align: center;
-}
+@import "index";
 
-.appContant {
-  display: flex;
+main {
+  @include flexCenter(column);
+  justify-content: space-between;
+
+
+  .appContainer {
+
+    width: 1286px;
+    //border: 3px solid #0048ff;
+
+    .appTitle {
+      text-align: center;
+    }
+    
+    .appModules {
+      //display: grid;
+      //grid-template-columns: 1fr 1fr 1fr;
+      //height: 100%;
+      //width: 100%;
+      //background-color: #f3e0e0;
+    }
+
+
+    .appSubModule {
+      @include flexCenter(row);
+      justify-content: space-between;
+      position: relative;
+      width: 1286px;
+      height: 400px;
+
+      .bgBlack {
+        background-color: var(--main-color--black);
+      }
+    }
+
+    @media (max-width: 1286px) {
+      width: 345px;
+
+      .appTitle {
+        text-align: center;
+        margin-bottom: 20px;
+
+        h3 {
+          font-size: 28px;
+          line-height: 120%;
+        }
+      }
+
+      .appSubModule {
+        width: 345px;
+        flex-flow: column;
+      }
+    }
+  }
 }

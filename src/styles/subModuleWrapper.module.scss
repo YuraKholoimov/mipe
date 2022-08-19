@@ -1,37 +1,41 @@
-main {
-  height: 100vh;
-  border: 5px solid green;
+@import "index";
 
-  display: flex;
-  justify-content: center;
-  text-align: center;
+.subModuleWrapper {
+  @include flexCenter(column);
+  width: 628px;
+  height: 293px;
+  background-color: var(--bg-color, var(--main-color--red));
 
-  overflow: hidden;
-}
+  .subModuleContent {
+    @include flexCenter(column);
+    align-items: center;
+    height: 145px;
+    width: 496px;
+    color: white;
 
-.subModule {
-  width: 100%;
-  height: 200px;
-  display: flex;
-  flex-direction: row;
-  border: 1px solid red;
-}
 
-.appContainer {
-  height: 100vh;
-  width: 900px;
+    h3 {
+      line-height: 1.2px;
+    }
 
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
+    p {
+      color: white;
+    }
 
-  border: 1px solid;
-}
+  }
+  @media (max-width: 1286px) {
+    width: 345px;
+    margin: 10px 0;
 
-.appContant {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+    .subModuleContent {
+      height: 231px;
+      width: 345px;
+      //padding: 20px;
+
+      h3 {
+        font-size: 25px;
+        line-height: 120%;
+      }
+    }
+  }
 }
