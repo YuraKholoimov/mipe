@@ -1,36 +1,28 @@
-import s from "../styles/module.module.scss"
-import {ListItem} from "./ListItem";
+import React, {useState} from "react";
+import s from "../styles/accordion.module.scss";
 import {specializedSubject} from "../bll/productsSlice";
-import {useState} from "react";
+import {ListItem} from "./common/ListItem";
 
-export const Module: React.FC<ModulePropsType> = ({title, specializ}) => {
-    const [isOpen, setIsOpen] = useState<boolean>(false)
+export const Module: React.FC<ModulePropsType> = ({module, index}) => {
+    const [selected, setSelected] = useState<boolean>(false)
 
-    const onClickHandler = () => {
-        setIsOpen(state => !state)
+    const onClickHandler = () => setSelected(state => !state)
 
-    }
     return (
-        <div className={s.moduleContainer}>
-            <div className={`${s.moduleTitle} ${isOpen && s.modalNoActive}`}
-                 onClick={onClickHandler}
-            >
-                <h4>{title}</h4>s
+        <div className={s.item}>
+            <div className={`${s.moduleTitle} ${selected && s.modalNoActive}`} onClick={onClickHandler}>
+                <h4>{`${index + 1} Модуль`}</h4>
             </div>
-            <div className={`${s.moduleLists} ${ !isOpen && s.hideModuleLists}`}>
-                <ul>
-                    {
-                        specializ.map((el: specializedSubject  , index:number) => {
-                            return <ListItem key={index} ListName={el.string}/>
-                        })
-                    }
-                </ul>
+
+            {/*----- Отрисовка по 5 li ------*/}
+            <div className={selected ? `${s.content} ${s.show}` : s.content}>
+                {module.map((el: specializedSubject) => <ListItem key={index} ListName={el.string}/>)}
             </div>
         </div>
     );
 };
 
 type ModulePropsType = {
-    title: string
-    specializ: specializedSubject[]
+    index: number
+    module: specializedSubject[]
 }

@@ -1,15 +1,15 @@
 import React, {useEffect} from 'react';
-import './styles/app.module.scss';
 
-import s from "./styles/app.module.scss"
 import {SubModule} from "./components/SubModule";
 import {setProductThunk} from "./bll/productsSlice";
-import {useDispatch} from "react-redux";
-import NewApp from "./components/newApp";
-import {Square} from "./components/Square";
+import {Square} from "./components/common/Square";
+import {Accordion} from "./components/Accordion";
+
+import s from "./styles/app.module.scss";
+import {useAppDispatch} from "./bll/store";
 
 function App() {
-    const dispatch = useDispatch<any>();
+    const dispatch = useAppDispatch();
 
     useEffect(() => {
         dispatch(setProductThunk())
@@ -24,7 +24,7 @@ function App() {
 
                 {/*----- Отрисовка всех программ -----*/}
                 <section>
-                    <NewApp/>
+                    <Accordion/>
                 </section>
 
                 {/*----- Дополнительные блоки -----*/}

@@ -4,7 +4,7 @@
   @include flexCenter(column);
   width: 628px;
   height: 293px;
-  background-color: var(--bg-color, var(--main-color--red));
+  background-color: var(--main-color--red);
 
   .subModuleContent {
     @include flexCenter(column);
@@ -21,8 +21,9 @@
     p {
       color: white;
     }
-
   }
+
+
   @media (max-width: 1286px) {
     width: 345px;
     margin: 10px 0;
@@ -30,7 +31,6 @@
     .subModuleContent {
       height: 231px;
       width: 345px;
-      //padding: 20px;
 
       h3 {
         font-size: 25px;

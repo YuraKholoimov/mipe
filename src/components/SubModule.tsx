@@ -1,7 +1,7 @@
 import React from 'react';
 
 import s from "../styles/subModuleWrapper.module.scss"
-import {ListItem} from "./ListItem";
+import {ListItem} from "./common/ListItem";
 
 export const SubModule: React.FC<SubModulePropsType> = ({children,title, content, ...restProps}) => {
     return (
