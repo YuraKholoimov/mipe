@@ -16,7 +16,7 @@ export const Module: React.FC<ModulePropsType> = ({module, index}) => {
 
             {/*----- Отрисовка по 5 li ------*/}
             <div className={selected ? `${s.content} ${s.show}` : s.content}>
-                {module.map((el: specializedSubject) => <ListItem key={index} ListName={el.string}/>)}
+                {module.map((el: specializedSubject) => <ListItem key={el.string} ListName={el.string}/>)}
             </div>
         </div>
     );

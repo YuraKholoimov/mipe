@@ -14,8 +14,8 @@ export const Accordion = () => {
         <div className={s.wrapper}>
             <div className={s.accordion}>
                 {
-                    products.map((item: ProductType, index: number) => (
-                        <div className={s.title} key={index}>
+                    products.map((item: ProductType) => (
+                        <div className={s.title} key={item.title}>
                             <h3>{item.title}</h3>
                             <div className={s.wrap}>
                                 {item.specializedSubjects
