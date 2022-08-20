@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/mipe/static/css/main.138e5504.css",
+    "main.js": "/mipe/static/js/main.44a7c2f1.js",
+    "static/js/787.28cb0dcd.chunk.js": "/mipe/static/js/787.28cb0dcd.chunk.js",
+    "static/media/StyreneAWeb-Bold.ttf": "/mipe/static/media/StyreneAWeb-Bold.0be7729139ca49bf9980.ttf",
+    "static/media/StyreneAWeb-Light.ttf": "/mipe/static/media/StyreneAWeb-Light.29eb7defa7790cfb7bef.ttf",
+    "static/media/StyreneAWeb-Medium.ttf": "/mipe/static/media/StyreneAWeb-Medium.24e2230623d61b134922.ttf",
+    "static/media/StyreneAWeb-Regular.ttf": "/mipe/static/media/StyreneAWeb-Regular.07e7d6b6ed7c25b2cb80.ttf",
+    "index.html": "/mipe/index.html",
+    "static/media/crose.svg": "/mipe/static/media/crose.92e98943eda702a20e64.svg",
+    "static/media/minus.svg": "/mipe/static/media/minus.cf4edd1321620ead8301.svg",
+    "main.138e5504.css.map": "/mipe/static/css/main.138e5504.css.map",
+    "main.44a7c2f1.js.map": "/mipe/static/js/main.44a7c2f1.js.map",
+    "787.28cb0dcd.chunk.js.map": "/mipe/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.138e5504.css",
+    "static/js/main.44a7c2f1.js"
+  ]
+}
